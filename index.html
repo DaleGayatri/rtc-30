@@ -53,7 +53,7 @@
 </head>
 <body>
     <h1 class="app_name">Tic Tac Toe</h1>
-<div class="board">
+<div class="board" id="board">
     <div class="cell cell-p1"></div>
     <div class="cell cell-p2"></div>
     <div class="cell"></div>
@@ -65,8 +65,22 @@
     <div class="cell"></div>
 </div>
     <script>
-        const board = [-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        const board = [-1,2,-1,1,-1,-1,2,-1,1];
+        const cellClass ={
+            1: "cell-p1",
+            2: "cell-p2",
+        }
+        function renderBoard(){
+            const boardElement = document.getElementById('board');
+            boardElement.innerHTML ='';
+            board.forEach((cellValue, index) => {
+            boardElement.innerHTML += '<div class="cell ${cellClass[cellValue]}"></div>';
+            });
 
+
+
+        }
+renderBoard();
      </script>
     
 </body>
