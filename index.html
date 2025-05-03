@@ -55,8 +55,8 @@
     <p class="turn" id="player">Player Turn</p>
 
     <div class="board" id="board">
-        <div class="cell" class="cell-p1"></div>
-        <div class="cell" class="cell-p2"></div>
+        <div class="cell cell-p1"></div>
+        <div class="cell cell-p2"></div>
         <div class="cell"></div>
         <div class="cell"></div>
         <div class="cell"></div>
@@ -81,7 +81,8 @@
             const boardElement=document.getElementById('board');
             boardElement.innerHTML='';
             const playerElement=document.getElementById('player');
-            playerElement.innerText='Player ${turn}s Turn';
+            playerElement.innerText = `Player ${turn}'s Turn`;
+
            
             board.forEach((cellValue,index)=>{
                 const cellPlayerImage=playerImage[cellValue];
