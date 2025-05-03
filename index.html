@@ -96,17 +96,15 @@
         function handleTurn(cellIndex) {
             if (board[cellIndex] === -1) {
                 board[cellIndex] = turn;
-                if (checkWinner()) {
-                    alert(Player${turn}wins!);
-                    return; 
-                }
-                turn = turn === 1 ? 2 : 1; 
+               turn = turn === 1 ? 2 : 1; 
                 renderBoard();
             } else {
                 alert("Invalid move");
             }
         }
         function checkWinner(){
+            console.log("checking Winner");
+            console.log(board);
             const p1=1;
             const p2=2;
            if(checkPlayerForWins(p1,0,1,2)){
