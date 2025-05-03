@@ -54,18 +54,25 @@
     <h1 class="heading">Tic Tac Toe</h1>
     <p class="turn" id="player">Player Turn</p>
 
-    <div class="board" id="board"></div>
-
+    <div class="board" id="board">
+        <div class="cell" class="cell-p1"></div>
+        <div class="cell" class="cell-p2"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
     <script>
-        const board = Array(9).fill(-1);
-        let turn = 1;
-        let gameOver = false;
-
-        const cellClass = {
-            1: 'cell-p1',
-            2: 'cell-p2',
+        const board=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        let turn=1;
+        const cellClass={
+            1:'cell-p1',
+            2:'cell-p2',
         };
-        const playerImage = {
+         const playerImage = {
             1: './img/cross.png',  
             2: './img/circle.png',
         };
