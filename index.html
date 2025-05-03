@@ -85,7 +85,8 @@
            
             board.forEach((cellValue,index)=>{
                 const cellPlayerImage=playerImage[cellValue];
-                const cellImage=cellPlayerImage?<img src="${cellClass[cellValue]}"/>:'';
+                const cellImage = cellPlayerImage ? <img src="${cellClass[cellValue]}"/> : '';
+
 
                 boardElement.innerHTML += `<div class="cell ${cellClass[cellValue] || ''}" onclick="handleTurn(${index})">
                 ${cellValue !== -1 ? `<img src="${playerImage[cellValue]}" />` : ''}</div>`;
