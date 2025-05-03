@@ -97,8 +97,8 @@
             if (board[cellIndex] === -1) {
                 board[cellIndex] = turn;
                 if (checkWinner()) {
-                    alert(Player ${turn} wins!;
-                    return; 
+                    alert(Player' ${turn} wins!');
+                    return;
                 }
                 turn = turn === 1 ? 2 : 1; 
                 renderBoard();
