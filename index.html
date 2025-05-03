@@ -73,7 +73,7 @@
             2:'cell-p2',
         };
         const playerImage={
-            1:'./../img/cross.png',
+            1:'cross.png',
             2:'circle.png',
         }
 
@@ -87,7 +87,8 @@
                 const cellPlayerImage=playerImage[cellValue];
                 const cellImage=cellPlayerImage?<img src="${cellClass[cellValue]}"/>:'';
 
-                boardElement.innerHTML+=<div class="cell ${cellClass[cellValue]}" onclick="handleTurn(${index})"><img src="${playerImage[cellValue]}"/></div>;
+                boardElement.innerHTML+=<div class="cell ${cellClass[cellValue]}" onclick="handleTurn(${index})">
+                    <img src="${playerImage[cellValue]}"/></div>;
             });
             checkWinner();
         }
