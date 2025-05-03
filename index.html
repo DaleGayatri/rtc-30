@@ -64,6 +64,8 @@
         <div class="cell"></div>
         <div class="cell"></div>
         <div class="cell"></div>
+        <div class="cell"></div> 
+        <div class="cell"></div> 
     </div>
     <script>
         const board=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
@@ -86,7 +88,8 @@
            
             board.forEach((cellValue,index)=>{
                 const cellPlayerImage=playerImage[cellValue];
-                const cellImage = cellPlayerImage ? <img src="${cellClass[cellValue]}"/> : '';
+                const cellImage = cellPlayerImage ? `<img src="${cellPlayerImage}" />` : '';
+
 
 
                 boardElement.innerHTML += `<div class="cell ${cellClass[cellValue] || ''}" onclick="handleTurn(${index})">
